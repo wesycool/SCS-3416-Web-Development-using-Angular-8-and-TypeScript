@@ -1,4 +1,4 @@
-# SCS-3416 - Web Development using Angular 8 and TypeScript
+# Web Development using Angular 8 and TypeScript
 
 ## Course Description
 This introductory 12 weeks course provides the skills you need to begin front-end development in today’s ever changing IT landscape. Angular 8 and TypeScript which is now considered one of the most popular JavaScript framework for front-end development. Skills in Angular 8 and Restful Web Services are regarded essential for full-stack developer in today’s competitive IT world.
