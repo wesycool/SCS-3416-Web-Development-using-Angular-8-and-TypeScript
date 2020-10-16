@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    // Function constructors
+    function Circle(radius)
+    {
+        this.radius = radius;
+        //if put prototype.getArea inside Circle waste processing power
+        
+        Circle.prototype.getArea =
+            function () {
+                return Math.PI * Math.pow(this.radius, 2);
+            }
+        
+        /*
+        or
+        this.prototype.getArea =
+            function () {
+                return Math.PI * Math.pow(this.radius, 2);
+            }
+        */
+    }
+  
+
+    var myCircle = new Circle(10);
+    console.log("myCircle:", myCircle);
+    console.log("myCircle.getArea():", myCircle.getArea());
+
+    var myOtherCircle = new Circle(20);
+    console.log("myOtherCircle:", myOtherCircle);
+    </script>
+</body>
+</html>
+

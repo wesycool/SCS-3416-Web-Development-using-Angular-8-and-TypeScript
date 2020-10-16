@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //Event handling
+        //Event DOMContentLoaded ensure we call a function when all html and css 
+        //is loaded already
+        document.addEventListener("DOMContentLoaded",
+            function () {
+                function sayHello() {
+                    this.textContent = "Albert Press it!!" //this statement is the keys
+                    console.log("this object:", this); //this object becomes:<button>Albert Press it!!</button>
+                    var name =
+                     document.getElementById("name").value;
+                    var message = "<h2>Hello " + name + "!</h2>";
+
+
+                    document
+                      .getElementById("content")
+                      .innerHTML = message;
+
+                }
+
+                //Unobstrusive event binding
+                //The reason it is call this way is that the html doesn't need to know
+                //anything about the javascript
+                //document.querySelector looking for button.
+                //the addEventListener listen for the "click" event and when that happens
+                //I want you to use this function expression or value "sayHello"
+                //this object:<button>Albert Press it!!</button>
+                document.querySelector("button").addEventListener("click", sayHello);
+            }
+            );
+    </script>
+</head>
+<body>
+    <p>
+        Say hello to
+        <input id="name" type="text" />
+        <button>Say it!</button>
+    </p>
+    <div id="content"></div>
+</body>
+</html>

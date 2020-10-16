@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo"></p>
+    
+ 
+    
+    <script>
+        // The property will be added to myFather. Not to myMother. Not to any other person objects.
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        var myFather = new Person("John", "Doe", 50, "blue");
+        var myMother = new Person("Sally", "Rally", 48, "green");
+
+        myFather.nationality = "English";
+
+        document.getElementById("demo").innerHTML =
+        "My father is " + myFather.nationality;
+    </script>
+
+</body>
+</html>

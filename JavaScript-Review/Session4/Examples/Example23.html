@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        function changeColor()
+        {
+            $("div:first").css("background-color", "black");
+        }
+    </script>
+</head>
+<body>
+    <div style="float:left;background-color:aqua; width:150px;height:120px;"></div>
+    <div style="float:left; background-color:maroon;width:150px;height:120px;"></div>
+    <div style="float:left;background-color:green;width:150px;height:120px;"></div>
+    <br /><br /><br /><br /><br /><br />
+    <input type="button" value="Click Me" onclick="changeColor()" />
+</body>
+</html>

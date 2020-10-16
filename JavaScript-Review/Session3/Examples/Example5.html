@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    function test()
+    {
+        console.log("Hello Albert Lam");
+        console.log(this);//window object
+        this.myName = "Albert Lam"
+    }
+    test();
+    console.log("window.myName:", window.myName);//show Albert Lam
+</script>
+</body>
+</html>

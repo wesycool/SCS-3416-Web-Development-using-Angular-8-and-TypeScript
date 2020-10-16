@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //Emphasize onclick event handler
+    function sayHello() {
+        var name =
+         document.getElementById("name").value;
+        var message = "<h2>Hello " + name + "!</h2>";
+        document.getElementById("content").innerHTML = message;
+        
+    }
+
+</script>
+    <p>
+        Say hello to
+        <input id="name" type="text"/>
+        <button onclick="sayHello();">Say it!</button>
+    </p>
+    <div id="content"></div>
+</body>
+</html>

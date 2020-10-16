@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //Begin Pass by Value
+    var a = 7;
+    var b = a;
+    console.log("a: " + a);
+    console.log("b: " + b);
+
+    b = 5;
+    console.log("pass by value, after b update:");
+    console.log("pass by value,a: " + a);
+    console.log("pass by value, b:" + b);
+    //End Pass by value
+
+    //Begin Pass by Reference
+    var a = { x: 7 };
+    var b = a;
+    console.log("pass by reference, after var a = {x:7}");
+    console.log("pass by reference, after var b = a");
+    console.log("pass by reference,a:", a);
+    console.log("pass by reference,b:", b);
+
+    b.x = 5;
+    console.log("pass by reference, after b.x update:");
+    console.log("pass by reference a:", a); //both a.x=5 and b.x=5
+    console.log("pass by reference b:", b);
+</script>
+</body>
+</html>

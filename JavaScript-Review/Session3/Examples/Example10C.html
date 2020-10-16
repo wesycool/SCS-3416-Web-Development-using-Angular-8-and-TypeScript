@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        //ClassB inherits from ClassA
+        var ClassA = function () {
+            this.name = "class A";
+        }
+        ClassA.prototype.print = function () {
+            console.log(this.name);
+        }
+        var a = new ClassA();
+        a.print();
+        var inheritsFrom = function (child, parent) {
+            child.prototype = Object.create(parent.prototype);
+        };
+        var ClassB = function () {
+            this.name = "class B";
+            this.surname = "I'm the child";
+        }
+
+        inheritsFrom(ClassB, ClassA);
+        var b = new ClassB();
+        
+        console.log("calling b.print()");
+        b.print();
+        ClassB.prototype.print = function () {
+       
+            console.log("this.name:",this.name);
+            console.log("this.surname:", this.surname);
+            console.log("this:", this);
+        }
+        console.log("calling b.print() after overriding print() method of class A in Class B");
+        b.print(); //the print() function in a object is called than the print function in b object is call
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

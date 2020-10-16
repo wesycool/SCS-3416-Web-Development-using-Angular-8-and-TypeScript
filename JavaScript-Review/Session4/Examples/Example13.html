@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="ajax-utils.js"></script>
+    <script>
+        //demonstrate how to call ajax code
+        document.addEventListener("DOMContentLoaded",
+            function (event)
+            {
+                //Unobtrusive event binding
+                document.querySelector("button")
+                .addEventListener("click", function () {
+
+                    //Call server to get the name
+                    //name.txt is location on the server
+                    $ajaxUtils.sendGetRequest("name.txt",
+                        function (request) {
+                            var name = request.responseText;
+                            console.log("name:",name);
+                            document.querySelector("#content").innerHTML="<h2>Hello " + name + "!</h2>";
+                        });
+                });
+            }
+
+            );
+    </script>
+</head>
+<body>
+    <h1 id="title">Ajax Example</h1>
+    <p>
+        <button>
+            Say Hello To Someone on the Server!
+        </button>
+    </p>
+
+    <div id="content"></div>
+</body>
+</html>

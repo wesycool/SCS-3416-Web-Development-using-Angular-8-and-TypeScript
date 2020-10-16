@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+        Javascript has only one type of number.
+        Numbers can be written with, or without, decimals.
+
+        The isNaN() function returns true if the value of the argument is not a number.
+        returns false if the value of the argument is a number.
+        */
+        var x = Number(34.23).toFixed(2); // A number with decimals
+        var y = 34; //A number without decimals
+        var b1 = isNaN(123);//false
+        var b2 = isNaN("Hello");//true
+        console.log("value of x:" + x);
+        console.log("value of y:" + y);
+        console.log("value of b1:" + b1);
+        console.log("value of b2:" + b2);
+    </script>
+</body>
+</html>

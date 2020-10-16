@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        //Emphasize onblur event handler
+        //test inputbox by typing someting in and click outside of the input box
+        //and the sayHello function is trigger.
+        function sayHello() {
+        
+        //this is pointing to window because the function is defined in global context
+        console.log("this object:", this);
+        console.log("hello");
+        var name =
+         document.getElementById("name").value;
+        var message = "<h2>Hello " + name + "!</h2>";
+
+
+        document
+          .getElementById("content")
+          .innerHTML = message;
+
+    }
+
+    </script>
+    <p>
+        Say hello to
+        <!--onblue means when this particular element loses focus-->
+        <input onblur="sayHello();" id="name" type="text" />
+        <button onclick="sayHello();">Say it!</button>
+    </p>
+    <div id="content"></div>
+</body>
+</html>

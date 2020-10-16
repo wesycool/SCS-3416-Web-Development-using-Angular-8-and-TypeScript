@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //introduce immediately invoke function expression
+       function a () {
+            console.log("Hello Albert function a");
+        }
+       a();
+
+       var b = function () {
+           console.log("Hello Albert function b");
+       }
+       b();
+
+       var c = (function () {
+           console.log("Hello Albert function c");
+           console.log("this:", this);
+       })
+        //function a(), b() and c() the same outcome
+       
+       c();
+
+        //define function and invoke function by putting "()"
+        //Immediately Invoked Function Expression
+        //() produce function object and put "()" right behind it to invoke function
+       (function () {
+           console.log("Hello Albert function d");
+           console.log("this:", this);
+
+       })();
+
+        //show pass parameter example.
+       (function (name) {
+           console.log("Hello " + name);
+
+       })("Albert Lam function e");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

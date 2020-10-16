@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <p>
+        Say hello to
+        <input id="name" type="text" />
+        <button>Say it!</button>
+    </p>
+    <div id="content"></div>
+    <script>
+        /* The purpose of this example is how to change the value of the "Say It!" 
+        button after it is clicked to "Albert Press it!!
+        The function change the text of the button to "Albert Press it!!".
+        */
+        function sayHello() {
+                this.textContent="Albert Press it!!" //this statement is the keys
+                console.log("this object:", this); //this object becomes:<button>Albert Press it!!</button>
+                var name =
+                 document.getElementById("name").value;
+                var message = "<h2>Hello " + name + "!</h2>";
+
+
+                document
+                  .getElementById("content")
+                  .innerHTML = message;
+
+        }
+
+        //Unobstrusive event binding
+        //The reason it is call this way is that the html doesn't need to know
+        //anything about the javascript
+        //document.querySelector looking for button.
+        //the addEventListener listen for the "click" event and when that happens
+        //I want you to use this function expression or value "sayHello"
+        //this object:<button>Albert Press it!!</button>
+    document.querySelector("button").addEventListener("click", sayHello);
+	
+    </script>
+</body>
+</html>
+

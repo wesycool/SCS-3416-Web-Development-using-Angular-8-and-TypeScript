@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //problem with the below for loop is that arrays are objects after all
+    //
+    var names2 = ["Albert", "John", "Joe"];
+    names2.greeting = "Hi!"; //The greeting became the property of the array no different
+    //than number 0, number 1 and so on.
+    //the below for loop, loop over the properties names of the object
+    //arrays are just objects in javascript
+    //this for loop will loop over the properties even if the property has nothing
+    //to do with the core data we want to loop over.
+    for(var name in names2)
+    {
+        console.log("Hello " + name + " " + names2[name]);
+    }
+</script>
+</body>
+</html>

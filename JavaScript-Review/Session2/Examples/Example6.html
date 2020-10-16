@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var x = 2;
+    A();
+    function A()
+    {
+        var x = 5;
+        B();
+    }
+    function B() //function B physically defined in global scope, therefore look for x in global scope
+    {
+        console.log("function B:" + x);
+    }
+</script>
+</body>
+</html>

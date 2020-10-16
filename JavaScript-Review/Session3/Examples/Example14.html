@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    //fix example13.html
+    // Object literals and "this"
+    var literalCircle = { //equivalent to new Object
+        radius: 10,
+        getArea: function () {
+            var self = this; //==>self refer to literalCircle object
+            console.log("this:",this);
+
+            var increaseRadius = function () {
+                self.radius = 20;//==>inner function instead of this use self.
+                //self is referring to the object literal "literalCircle". So when using self where ever you are you 're referring object literal "literalCircle" now window object even
+                //inside inner function
+            };
+            increaseRadius();
+            console.log("this.radius:", this.radius);//why does this.radius ==>20 because of self.radius=20 which was referring literal object "literalCircle" not window object.
+            
+           
+            console.log("this.radius:", this.radius); //20
+            console.log("self.radius:", self.radius); //20
+            console.log("this", this); //20
+
+            return Math.PI * Math.pow(this.radius, 2); //==>this.radius=20 not 10
+            /*
+            conclusion: use self=this to deal with problem of variables declare in inner function which would normally be referencing window objects.
+            */
+        }
+    };
+
+    console.log(literalCircle.getArea());
+
+    </script>
+</body>
+</html>

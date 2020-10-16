@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //short hand array creation
+    var names = ["Albert", "John", "Joe"];
+    console.log(names);
+
+    for(var i=0;i<names.length;i++)
+    {
+        console.log("Hello " + names[i]);
+    }
+
+
+    names[100] = "Jim";
+    for (var i = 0; i < names.length; i++) {
+        console.log("Hello " + names[i]); //Hello undefined 97 times and than Hello Jim
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //Arrays
+    var array = new Array();
+    array[0] = "Albert";
+    array[1] = 2;
+    array[2] = function (name) {
+        console.log("Hello " + name);
+    };
+    array[3] = { course: "HTML, CSS & JS" };
+    console.log("array:", array);
+    array[2](); //Hello undefined
+    array[2]("Albert"); //Hello Albert
+    array[2](array[0]); //Hello Albert
+    console.log(array[3].course); //HTML,CSS, AND JS
+    console.log(array[3]); //return object
+</script>
+</body>
+</html>

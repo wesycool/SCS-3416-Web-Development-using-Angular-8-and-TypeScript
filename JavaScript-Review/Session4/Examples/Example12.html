@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script>
+        //Same problem as Example8.html except add new greeting variable.
+        //Example11.html will solve problem in Example10.html
+        //step 1
+        /*
+        (function () {
+            var AlbertGreeter = {};
+            AlbertGreeter.name = "Albert Lam";
+            var greeting = "Hello ";
+            AlbertGreeter.sayHello = function () {
+                console.log(greeting + AlbertGreeter.name);
+            }
+        })();
+        */
+        //step 2
+        (function (window) {
+            var AlbertGreeter = {};
+            AlbertGreeter.name = "Albert Lam";
+            var greeting = "Hello ";
+            AlbertGreeter.sayHello = function () {
+                console.log(greeting + AlbertGreeter.name);
+            }
+            window.AlbertGreeter = AlbertGreeter;
+        })(window);
+        
+        (function (window) {
+            var johnGreeter = {};
+            johnGreeter.name = "John";
+            var greeting = "Hi ";
+            johnGreeter.sayHi = function () {
+                console.log(greeting + johnGreeter.name);
+            }
+            window.johnGreeter = johnGreeter;
+        })(window);
+        
+        AlbertGreeter.sayHello();
+        johnGreeter.sayHi();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

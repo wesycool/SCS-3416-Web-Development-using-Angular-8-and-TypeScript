@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //Issue with using certain loop with array
+    var names2 = ["Albert", "John", "Joe"];
+    var myObj = {    //create object literal
+        name: "Albert",
+        course: "AngularJS",
+        platform:"Seneca College"
+
+    };
+
+    //special for loop used to traverse the properties of an object
+    //I want to grab every properties in myObj object
+    for (var prop2 in myObj) 
+    {
+        console.log(prop2 + ": " + myObj[prop2]);
+    }
+
+    for (var name in names2) {
+        console.log("Hello " + name + " " +names2[name]);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var message = "in global";
+    console.log("global:message=" + message);
+    var a = function()
+    {
+        var message = "inside a";
+        console.log("a: message=" + message);
+        b();
+    }
+    //b's outer reference is function a
+    //Scope chain is used to retrieve variables from Outer Variable Environments.
+    function b()
+    {
+        console.log("b: message = " + message);
+    }
+    a();
+</script>
+</body>
+</html>

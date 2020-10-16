@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    // Function constructors
+    function Circle(radius)
+    {
+        this.radius = radius;
+     
+       
+    }
+
+    
+    Circle.prototype.getArea =
+        function () {
+            return Math.PI * Math.pow(this.radius, 2);
+        }
+    var myCircle = Circle(10); //missing new keyword, should be "new Circle(10)".
+    console.log("myCircle:", myCircle); //myCircle is undefined because 
+    //Circle is a regular javascript function that doesn't return anything
+    console.log("myCircle.getArea():", myCircle.getArea());
+    //get error, cannot read property 'getArea' of undefined.
+
+   
+    </script>
+</body>
+</html>

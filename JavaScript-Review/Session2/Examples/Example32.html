@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //Functions are First-Class Data Types
+    //Functions are objects
+    function multiply(x, y) {
+        return x * y;
+    }
+    multiply.version = "v.1.0.0";
+    console.log(multiply.version);
+
+    //Function factory
+    function makeMultiplier(multiplier)
+    {
+        var myFunc = function (x) {
+            return multiplier * x;
+        };
+
+        return myFunc;
+    }
+
+    var multiplyBy3 = makeMultiplier(3);
+    console.log(multiplyBy3(10));//return 30
+    var doubleAll = makeMultiplier(2);
+    console.log(doubleAll(100)); //200
+</script>
+</body>
+</html>

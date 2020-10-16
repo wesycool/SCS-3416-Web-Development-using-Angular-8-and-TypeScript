@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+ 
+    <script>
+        //To solve problem in Example8.html create object as namespace
+        var AlbertGreeter = {};
+        AlbertGreeter.name = "Albert Lam";
+        AlbertGreeter.sayHello = function () {
+            console.log("Hello " + AlbertGreeter.name);
+        }
+        var johnGreeter = {};
+        johnGreeter.name = "John";
+        var greeting = "Hi ";
+        johnGreeter.sayHi = function () {
+            console.log(greeting + johnGreeter.name);
+        }
+        AlbertGreeter.sayHello();
+        johnGreeter.sayHi();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+</head>
+<body>
+
+    <h1 id="title1">Lecture on DOM PART1</h1>
+    <h2 id="title2">Lecture on DOM PART2</h2>
+    <p>
+        Say Hello to
+        <input id="name" type="text" />
+        <button onclick="sayHello();">Say it!</button>
+
+        <div id="content1"></div>
+        <div id="content2"></div>
+
+    </p>
+    <script>
+        function sayHello()
+        {
+           
+            var name = document.getElementById("name").value;
+            var message = "<h2>Hello " + name + "!</h2>";
+            document.getElementById("content1").textContent = message;
+            document.getElementById("content2").innerHTML = message;
+
+            if (name == "student") {
+                var title1 = document
+                .querySelector("#title1") //select by id and id is title1
+                .textContent;
+
+                var title2 = document
+                .querySelector("#title2") //select by id and id is title2
+                .textContent;
+
+                title1 += " & Loving it!";
+                title2 += " & Loving it!";
+                document.querySelector("#title1").textContent = title1;
+                document.querySelector("h2").textContent = title2;
+            }
+        }
+    </script>
+</body>
+</html>

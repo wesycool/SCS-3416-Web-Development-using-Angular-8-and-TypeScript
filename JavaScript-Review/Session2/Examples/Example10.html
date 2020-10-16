@@ -1,0 +1,56 @@
+﻿zz<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>Value that are true</p>
+    <p id="demoTrue"></p>
+    <p>Value that are false</p>
+    <p id="demoFalse"></p>
+    <script>
+        //begin true value
+        var b1 = Boolean(100);
+        var b2 = Boolean(3.14);
+        var b3 = Boolean(-15);
+        var b4 = Boolean("Hello");
+        var b5 = Boolean('false');
+        var b6 = Boolean(1 + 7 + 3.14);
+        var b7 = Boolean(5 < 6);
+
+        //end true value
+
+        //begin false value
+        var b8 = Boolean(6 < 5);
+        var b9 = Boolean(0);
+        var b10 = Boolean(-0);
+        var b11 = Boolean("");
+        var b12;
+        var b13 = Boolean(null);
+        var b14 = Boolean(false);
+        var x = 10 / "H";
+        var b15 = Boolean(x);
+        //end false value
+
+        document.getElementById("demoTrue").innerHTML =
+            "100 is " + b1 + "<br>"+
+            "3.14 is " + b2 + "<br>" +
+            "-15 is " + b3 + "<br>" +
+            "Any (not empty) string is " + b4 + "<br>" +
+            "Even the string 'false' is " + b5 +"<br>" +
+            "Any expression (except zero) is " + b6 + "<br>" +
+            "comparison operator that is true:" + b7 + "<br>";
+          
+        document.getElementById("demoFalse").innerHTML =
+            "comparison operator that is false:" + b8 + "<br>" +
+            "var x=0=>" + b9 + "<br>" +
+            "var x=-0 " + b10 + "<br>" +
+            "var x=&#34;&#34;:" + b11 + "<br>" +
+
+            "Boolean value of undefined:" + Boolean(b12) + "<br>" +
+            "Boolean value of null" + b13 + "<br>" +
+            "Boolean value of false is: " + b14 + "<br>" +
+            "Displays the Boolean value of not a number: 10/&#34;H&#34;:" + b15 + "<br>";
+    </script>
+</body>
+</html>

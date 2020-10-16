@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //Object creation
+    var company = new Object();
+    company.name = "Facebook";
+    //company.stock of company = 110; unexpected identifier error
+    company["stock of company"] = 110;
+    console.log(company);
+    console.log("Stock price is: " + company["stock of company"]);
+</script>
+</body>
+</html>

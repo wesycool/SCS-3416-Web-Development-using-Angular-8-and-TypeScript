@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    // Object literals and "this"
+    var literalCircle = { //equivalent to new Object
+        radius: 10,
+        getArea: function () {
+            console.log("this:",this);//this is no longer refer to window object but actual
+            //refer to our literalCircle class because of var literal = {
+            var increaseRadius = function () {
+                radius = 20; //if you have inner function within another function . The variable declares refers to the window(global) object.
+            };
+            increaseRadius();
+            console.log("this.radius:", this.radius);//this.radius ==>10 refer to the radius of object literalCircle.
+            //if you have inner function within another function the variable declared refer to global object.
+            console.log("radius:", radius);//this gives 20, pointing to global object instead of literal circle
+
+            //function this keyword start pointing to global object
+            console.log("window.radius:", window.radius);//20, this 20 get set in global object instead of literal circle object
+            return Math.PI * Math.pow(this.radius, 2); //this.radius ==>10
+        }
+    };
+
+    console.log(literalCircle.getArea());
+
+    </script>
+</body>
+</html>

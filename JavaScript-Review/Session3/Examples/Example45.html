@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript Array Methods</h2>
+
+    <h2>splice()</h2>
+
+    <p>The splice() method adds new elements to an array.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits;
+        function myFunction() {
+            fruits.splice(2, 0, "Lemon", "Kiwi");
+            document.getElementById("demo").innerHTML = fruits;
+        }
+
+        /*
+        The first parameter (2) defines the position(starts with 0) where new elements should be added (spliced in).
+
+        The second parameter (0) defines how many elements should be removed.
+
+        The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+        //Banana,Orange,Lemon,Kiwi,Apple,Mango
+
+        */
+    </script>
+
+</body>
+</html>

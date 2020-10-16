@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var employee = {
+            firstName: "Albert",
+            lastName: "Lam",
+            social: {
+                linkedin: "linkedin albertlam",
+                twitter: "twitter albertLam",
+                facebook:"facebook albertLam"
+            }
+        }
+        document.getElementById("demo").innerHTML = employee.firstName + " " + employee.lastName +
+            " " + employee.social.linkedin;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<html>
+<body>
+    <script>
+        //Closures
+        function makeMultiplier(multiplier)
+        {
+            //when we pass multiplier=2 is no different than
+            //var multiplier = 2
+            function b()
+            {
+                console.log("Multiplier is: " + multiplier);
+            }
+            b();
+            return (
+                    function (x) {
+                        return multiplier * x;
+                    }
+                );
+        }
+
+        var doubleAll = makeMultiplier(2);//return (function(x){ return 2*x;});
+        //assign function to doubleAll variable
+
+        console.log(doubleAll(10));
+    </script>
+</body>
+</html>
+       

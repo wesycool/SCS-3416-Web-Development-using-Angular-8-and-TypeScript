@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript Array Methods</h2>
+
+    <h2>concat()</h2>
+
+    <p>The concat() method is used to merge (concatenate) arrays:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var arr1 = ["Cecilie", "Lone"];
+        var arr2 = ["Emil", "Tobias", "Linus"];
+        var arr3 = ["Robin", "Morgan"];
+        var arr4= ["Albert", "John"];
+        var myChildren = arr1.concat(arr2, arr3, arr4); //Cecilie,Lone,Emil,Tobias,Linus,Robin,Morgan,Albert,John
+
+        document.getElementById("demo").innerHTML = myChildren;
+    </script>
+
+</body>
+</html>

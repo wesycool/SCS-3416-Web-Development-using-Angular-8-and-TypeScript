@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //Pass by reference vs by value
+    function changePrimitive(primValue) {
+        console.log("in changePrimitive..");
+        console.log("before:");
+        console.log(primValue);
+
+        primValue = 5;
+        console.log("after:");
+        console.log(primValue);
+    }
+        var value = 7;
+        changePrimitive(value); //primValue = value
+        console.log("after changePrimitive, orig value:");
+        console.log(value);
+    
+</script>
+</body>
+</html>

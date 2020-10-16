@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    function changeObject(objValue) {
+        console.log("in changeObject..");
+        console.log("before objValue.x:");
+        console.log(objValue.x); //objValue.x=>7
+
+        objValue.x = 5;
+        console.log("after objValue.x:");
+        console.log(objValue.x); //objValue.x==>5
+    }
+
+    value = { x: 7 };
+    changeObject(value); //objValue = value
+    console.log("after changeObject, orig value of value.x:");
+    console.log(value.x); //value.x =>5
+</script>
+</body>
+</html>

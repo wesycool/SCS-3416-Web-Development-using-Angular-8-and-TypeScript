@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+   
+</head>
+<body>
+   
+<h1 id="title">Lecture on DOM</h1>
+<p>
+    Say Hello to
+    <input id="name" type="text" />
+    <button>Say it!</button>
+
+    <div id="content"></div>
+</p>
+    <script>
+        //Have to put this script at the bottom because if put the script at the top 
+        //the dom haven't finish loading.
+        console.log(document.getElementById("title"));
+        console.log(document instanceof HTMLDocument); //https://msdn.microsoft.com/en-us/library/system.windows.forms.htmldocument(v=vs.110).aspx
+
+    </script>
+</body>
+</html>

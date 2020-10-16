@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+    // Object literals and "this"
+    var literalCircle = { //equivalent to new Object
+        radius: 10,
+        getArea: function () {
+            console.log(this);//this is no longer refer to window object but actual
+            //refer to our literalCircle class because of var literal = {
+            return Math.PI * Math.pow(this.radius, 2);
+        }
+    };
+
+    console.log(literalCircle.getArea());
+
+</script>
+</body>
+</html>

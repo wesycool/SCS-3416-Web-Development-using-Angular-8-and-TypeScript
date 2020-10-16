@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+        //ClassC inherits from Class B
+        var ClassA = function () {
+            this.name = "class A";
+        }
+        ClassA.prototype.print = function () {
+            console.log(this.name);
+        }
+        var a = new ClassA();
+        a.print();
+        var inheritsFrom = function (child, parent) {
+            child.prototype = Object.create(parent.prototype);
+        };
+        var ClassB = function () {
+            this.name = "class B";
+            this.surname = "I'm the child";
+        }
+
+        inheritsFrom(ClassB, ClassA);
+        var b = new ClassB();
+
+
+        ClassB.prototype.print = function () {
+           
+            console.log("inside ClassB.prototype.print = function () ");
+            console.log("this.name:",this.name);
+            console.log("this.surname:", this.surname);
+            console.log("this:", this);
+        }
+        ClassB.prototype.printClassB = function () {
+            console.log("inside ClassB.prototype.printClassB");
+            console.log("this.name:", this.name);
+            console.log("this.surname:", this.surname);
+            console.log("this:", this);
+        }
+        b.print();
+        b.printClassB();
+        var ClassC = function () {
+            this.name = "class C";
+            this.surname = "I'm the grandchild";
+        }
+
+        inheritsFrom(ClassC, ClassB);
+
+        ClassC.prototype.foo = function () {
+            // Do some funky stuff here...
+            console.log("foo function");
+        }
+
+        ClassC.prototype.print = function () {
+            
+            console.log("Sounds like this is working!");
+        }
+
+        ClassC.prototype.printClassC = function () {
+            console.log("printClassC");
+        }
+
+        var c = new ClassC();
+        c.print();
+        c.foo();
+        c.printClassB();
+        c.printClassC();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

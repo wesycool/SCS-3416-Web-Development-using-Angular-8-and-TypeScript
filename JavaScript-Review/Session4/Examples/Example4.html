@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <p>
+        Say hello to
+        <input id="name" type="text" />
+        <button>Say it!</button>
+    </p>
+    <div id="content"></div>
+    <script>
+        /* Discuss unobstrusive event binding where
+        we don't put the event and function in the button tag*/
+        //Discuss   document.querySelector("button").onclick = sayHello;
+
+    function sayHello() {
+        console.log("this object:", this); //this object:<button>say it!</button>
+        var name =
+         document.getElementById("name").value;
+        var message = "<h2>Hello " + name + "!</h2>";
+
+
+        document
+          .getElementById("content")
+          .innerHTML = message;
+
+    }
+
+        //Unobstrusive event binding
+        //The reason it is call this way is that the html doesn't need to know
+        //anything about the javascript
+        //document.querySelector looking for button.
+         //I want you to use this function expression or value "sayHello"
+        //this object:<button>say it!</button>
+    document.querySelector("button").onclick = sayHello;
+    </script>
+</body>
+</html>
+

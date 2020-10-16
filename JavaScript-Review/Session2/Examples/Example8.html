@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var message = "in global";
+        console.log("global:message=" + message);
+        var a = function()
+        {
+            var message = "inside a";
+            console.log("a: message = " + message);
+            /*function b() defined inside function a */
+            function b()
+            {
+                console.log("b: message = " + message);
+            }
+            b();
+        }
+        a();
+    </script>
+</body>
+</html>

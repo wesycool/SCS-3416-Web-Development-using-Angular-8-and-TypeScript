@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo"></p>
+
+    <p>The value of myFather.nationality is "undefined", because you cannot add a new property to a prototype the same way as you can add a new property to an existing object.</p>
+
+    <script>
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        Person.nationality = "English";
+
+        var myFather = new Person("John", "Doe", 50, "blue");
+        var myMother = new Person("Sally", "Rally", 48, "green");
+
+        document.getElementById("demo").innerHTML =
+        "The nationality of my father is " + myFather.nationality;
+    </script>
+
+</body>
+</html>

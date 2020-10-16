@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.0.0.js"></script>
+    <script>
+        function setCSS()
+        {
+            $('p:nth-child(1)').css("font-style", "italic");
+            $('p:nth-child(4)').css("font-style", "italic");
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecting the first and last tag</h1>
+    <div>
+        <p>I love jQuery 1 time</p>
+        <p>I love jQuery 2 time</p>
+        <p>I love jQuery 3 time</p>
+        <p>I love jQuery 4 time</p>
+    </div>
+    <input type="button" value="Click Me" onclick="setCSS()" />
+
+</body>
+</html>

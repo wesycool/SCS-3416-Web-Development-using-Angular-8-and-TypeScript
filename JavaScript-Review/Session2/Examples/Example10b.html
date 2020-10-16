@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // If statement (all false), NaN represent not a number
+        if(false || null || undefined || "" || 0 || NaN)
+        {
+            console.log("This line won't ever execute");
+        }
+        else
+        {
+            console.log("All false");
+        }
+        console.log("Boolean(null):" + Boolean(null));
+        console.log("Boolean(''):" + Boolean(''));
+        console.log("Boolean('Hello World!'):" + Boolean("Hello World!"));
+    </script>
+</body>
+</html>
