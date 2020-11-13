@@ -16,3 +16,6 @@
 [submodule "Angular8-Session5"]
 	path = Angular8-Session5
 	url = https://github.com/wesycool/Angular8-Session5.git
+[submodule "Angular8-Assignment2"]
+	path = Angular8-Assignment2
+	url = https://github.com/wesycool/Angular8-Assignment2.git
