@@ -19,3 +19,21 @@
 [submodule "Angular8-Assignment2"]
 	path = Angular8-Assignment2
 	url = https://github.com/wesycool/Angular8-Assignment2.git
+[submodule "Angular8-Assignment3"]
+	path = Angular8-Assignment3
+	url = https://github.com/wesycool/Angular8-Assignment3.git
+[submodule "Angular8-Session10"]
+	path = Angular8-Session10
+	url = https://github.com/wesycool/Angular8-Session10.git
+[submodule "Angular8-Session6"]
+	path = Angular8-Session6
+	url = https://github.com/wesycool/Angular8-Session6.git
+[submodule "Angular8-Group-Project"]
+	path = Angular8-Group-Project
+	url = https://github.com/wesycool/Angular8-Group-Project
+[submodule "Angular8-Session11"]
+	path = Angular8-Session11
+	url = https://github.com/wesycool/Angular8-Session11.git
+[submodule "Angular8-eclipse"]
+	path = Angular8-eclipse
+	url = https://github.com/wesycool/Angular8-eclipse.git
